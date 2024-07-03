@@ -8,6 +8,12 @@ const RecommendedShow = () => {
   const [shows, setShows] = useState([]);
   const [hasMore, setHasMore] = useState(true);
 
+  const convertDriveLink = (url) => {
+    const fileIdMatch = url.match(/d\/(.*?)\//);
+    const fileId = fileIdMatch ? fileIdMatch[1] : null;
+    return fileId ? `https://drive.google.com/thumbnail?id=${fileId}` : url;
+  };
+
   useEffect(() => {
     loadMoreShows();
   }, []);
@@ -54,11 +60,11 @@ const RecommendedShow = () => {
               className="flex-none w-[13rem] h-[19rem] bg-gray-300 rounded-md relative"
             >
               <img
-                src="https://cdn.pixabay.com/photo/2018/05/10/11/34/concert-3387324_1280.jpg"
+                src={convertDriveLink(show.imgUrl)}
                 alt={show.eventName}
                 className="rounded-lg w-full h-full object-cover"
               />
-              <div className="absolute bottom-0 left-0 right-0 px-3 pb-2 bg-gray-50  bg-opacity-10">
+              <div className="absolute bottom-2 left-0 right-0 px-3 pb-2 bg-gray-50  bg-opacity-10">
                 <div className="flex justify-between text-white items-center">
                   <p className=" font-semibold text-sm">
                     {truncateTitle(show.eventName)}
