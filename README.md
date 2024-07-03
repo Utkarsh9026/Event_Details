@@ -1,8 +1,19 @@
-# React + Vite
+# Event_Details
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Brief Description:
+Events_Details is a website that shows upcoming and recommended events in a particular location. It aims to provide users with an easy way to discover events happening 
+around them, offering personalized recommendations based on their preferences and location.
 
-Currently, two official plugins are available:
+Approach:
+The project is built using ReactJS, a popular JavaScript library for building user interfaces. ReactJS was chosen for its component-based architecture, which allows for efficient development and maintenance of the application. The application is designed to be responsive, ensuring a seamless experience across different devices and screen sizes.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Tech Stack
+1. Frontend: ReactJS
+2. State Management: React hooks
+3. Styling: CSS and TailWind CSS
+4. Package Manager: npm
+
+Instructions to Build and Run:
+1. Running the Application: npm run dev
+2. Building the Application: npm run build
+
